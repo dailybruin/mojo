@@ -13,6 +13,13 @@
 				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</section>
 			
+			<figure>
+			<?php the_post_thumbnail('large',array('class' => 'scale-with-grid')); ?>
+			<figcaption>
+				<?php echo get_post(get_post_thumbnail_id($post->ID))->post_excerpt; ?>
+			</figcaption>
+			</figure>
+
 			<section class="article_text">
 				<?php the_content(); ?>
 				<p class="byline">&mdash;<?php the_author_posts_link(); ?></p>
