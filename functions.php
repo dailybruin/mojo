@@ -40,13 +40,4 @@ add_action( 'show_user_profile', 'mojo_add_custom_user_profile_fields' );
 add_action( 'edit_user_profile', 'mojo_add_custom_user_profile_fields' );
 add_action( 'personal_options_update', 'mojo_save_custom_user_profile_fields' );
 add_action( 'edit_user_profile_update', 'mojo_save_custom_user_profile_fields' );
-/* Change login logo */
-function mojo_login_logo() {
-echo '<style type="text/css">
-    h1 a { background-image:url('.get_bloginfo('template_url').'/img/login-logo.png) !important; }
-</style>';
-}
-
-add_action('login_head', 'mojo_login_logo');
-
 ?>
